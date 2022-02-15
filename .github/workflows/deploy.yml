@@ -3,7 +3,7 @@ name: deploy
 on:
   workflow_run:
     workflows: ["ci"]
-    branches: {}
+    branches: [main]
     types:
       - completed
 
