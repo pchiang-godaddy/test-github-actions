@@ -8,7 +8,6 @@ on:
         required: true
         default: null
 
-
 jobs:
   delete:
     if: ${{ github.event.inputs.stack_path != null }}
@@ -17,3 +16,24 @@ jobs:
       - name: echo
         run: |
           echo "testing the stack_path: ${{ github.event.inputs.stack_path }}"
+
+      - name: Checkout current repo
+        uses: actions/checkout@v2
+
+      - name: Setup Environment 
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - name: Install poetry
+        run:  |
+          pip install --upgrade pip
+          pip install --upgrade poetry
+
+      - name: Setup poetry
+        run:  |
+          echo "${{github.event.inputs.stack_path}}"
+          echo $INPUT
+          poetry config http-basic.artifactory "${{github.event.inputs.stack_path}}"
+        env:
+          INPUT: ${{github.event.inputs.stack_path}}
