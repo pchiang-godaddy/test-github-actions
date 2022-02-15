@@ -13,4 +13,4 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: echo
-        uses: echo this is deploy run
+        run: echo this is deploy run
