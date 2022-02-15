@@ -7,12 +7,12 @@ on:
         stack_path:
           description: 'stack path to be deleted'
           required: true
-          default: 'null'
+          default: null
 
 
 jobs:
   delete:
-  if: ${{ github.event.inputs.event == 'null' }}
+    if: ${{ github.event.inputs.event == null }}
     runs-on: [ubuntu-latest]
     steps:
       - name: echo
