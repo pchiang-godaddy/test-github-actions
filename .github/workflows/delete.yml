@@ -1,13 +1,12 @@
 name: delete
 
 on:
-  workflow_run:
-    workflow_dispatch:
-      inputs:
-        stack_path:
-          description: 'stack path to be deleted'
-          required: true
-          default: null
+  workflow_dispatch:
+    inputs:
+      stack_path:
+        description: 'stack path to be deleted'
+        required: true
+        default: null
 
 
 jobs:
