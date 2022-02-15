@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       stack_path:
-        description: 'stack path to be deleted'
+        description: 'Stack path to be deleted. Format should be cicd/us-west-2/{}.yml'
         required: true
         default: null
 
