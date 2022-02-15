@@ -11,9 +11,9 @@ on:
 
 jobs:
   delete:
-    if: ${{ github.event.inputs.event != null }}
+    if: ${{ github.event.inputs.stack_path != null }}
     runs-on: [ubuntu-latest]
     steps:
       - name: echo
         run: |
-          echo "testing the stack_path: ${{ github.event.inputs.event }}"
+          echo "testing the stack_path: ${{ github.event.inputs.stack_path }}"
