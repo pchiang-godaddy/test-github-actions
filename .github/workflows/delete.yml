@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: echo
         run: |
-          echo "testing the stack_path: ${{ github.event.inputs.event == null }}"
+          echo "testing the stack_path: ${{ github.event.inputs.event }}"
