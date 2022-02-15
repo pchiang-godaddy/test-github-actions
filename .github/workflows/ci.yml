@@ -1,0 +1,13 @@
+name: ci
+
+on:
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  push: {}
+
+jobs:
+  test:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: echo
+        uses: echo this is ci run
