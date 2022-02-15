@@ -11,7 +11,7 @@ on:
 
 jobs:
   delete:
-    if: ${{ github.event.inputs.event == null }}
+    if: ${{ github.event.inputs.event != null }}
     runs-on: [ubuntu-latest]
     steps:
       - name: echo
