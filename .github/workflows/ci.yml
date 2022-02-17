@@ -3,11 +3,11 @@ name: ci
 on:
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
-  push: {}
+  push:
 
 jobs:
   test:
     runs-on: [ubuntu-latest]
     steps:
       - name: echo
-        run: echo this is ci run
+        run: echos this is ci run
