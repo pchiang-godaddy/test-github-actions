@@ -18,7 +18,7 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_TITLE: "Github Workflow"
-          SLACK_MESSAGE: "test build fails"
+          SLACK_MESSAGE: "build fails on workflow ${{ github.event.workflow.name}}"
           SLACK_COLOR: "#FF0000"
           SLACK_USERNAME: 'github-actions'
           SLACK_ICON: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
