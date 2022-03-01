@@ -14,7 +14,9 @@ jobs:
     steps:
       - name: echo
         run: echo ${{ github.event.workflow.name}}
-      - uses: gdcorp-action-public-forks/action-slack-notify@a8f00dc3dbe3d3e876546e2f3334139c19a6bac9
+
+      - name: Slack Notification
+        uses: gdcorp-action-public-forks/action-slack-notify@a8f00dc3dbe3d3e876546e2f3334139c19a6bac9
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_TITLE: "Github Workflow"
